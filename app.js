@@ -8,7 +8,10 @@ const purchase = document.querySelector('.purchase button');
 const description = document.querySelector('.info h3');
 const sizes = document.querySelector('.sizes');
 
-
+//event listeners
+sizes.addEventListener('click', function(e){
+    e.target.classList.toggle("active");
+})
 
 //Moving Animation Event
 container.addEventListener('mousemove',(e)=>{
@@ -20,7 +23,8 @@ container.addEventListener('mousemove',(e)=>{
 
 //Animate In
 container.addEventListener('mouseenter', e => {
-    card.style.transition = "none";
+    card.style.transition = "all 0.5s ease";
+    // card.style.transition = "none";
     //popout
     title.style.transform = 'translateZ(150px)';
     dish.style.transform = 'translateZ(200px) rotateZ(-45deg)';
@@ -41,3 +45,5 @@ container.addEventListener('mouseleave', e => {
     sizes.style.transform = 'translateZ(0px)';
     purchase.style.transform = 'translateZ(0px)';
 });
+
+//onclick

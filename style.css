@@ -84,11 +84,13 @@ body{
     cursor: pointer;
     font-weight: bold;
     color: #585858;
+    outline: none;
 }
 
 button.active{
     background: #585858;
     color: white;
+    outline: none;
 }
 
 .purchase{
@@ -97,12 +99,21 @@ button.active{
 }
 
 .purchase button{
+    transition: all 0.75s ease-out;
     width: 100%;
     padding: 1rem 0rem;
     background: #f54642;
+    opacity: 0.5;
     border: none;
     color: white;
     cursor: pointer;
     border-radius: 30px;
     font-weight: bolder;
+    outline: none;
+}
+
+.purchase button:hover{
+    transition: all 0.75s ease;
+    opacity: 1;
+    cursor: pointer;
 }
